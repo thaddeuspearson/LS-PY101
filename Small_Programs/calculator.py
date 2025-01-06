@@ -44,14 +44,15 @@ while not is_valid_operation(operation):
     operation = input()
 
 # Perform the operation on the two numbers.
-if operation == "1":
-    output = int(number1) + int(number2)
-elif operation == "2":
-    output = int(number1) - int(number2)
-elif operation == "3":
-    output = int(number1) * int(number2)
-elif operation == "4":
-    output = int(number1) / int(number2)
+match operation:
+    case "1":
+        output = int(number1) + int(number2)
+    case "2":
+        output = int(number1) - int(number2)
+    case "3":
+        output = int(number1) * int(number2)
+    case "4":
+        output = int(number1) / int(number2)
 
 # Print the result to the terminal.
 prompt(f"The result is: {output}")
