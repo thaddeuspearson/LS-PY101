@@ -1,58 +1,71 @@
 # Constants
 VALID_OPERATIONS = ['1', '2', '3', '4']
 
+
 # Helper functions
 def prompt(message):
     print(f"==> {message}")
+
 
 def is_valid_number(num_str):
     try:
         int(num_str)
     except ValueError:
-        prompt("invalid number entered. Try again")
         return False
     return True
 
+
+def get_valid_user_input(message, validation_func=None):
+    prompt(message)
+    user_input = input()
+    if validation_func:
+        while not validation_func(user_input):
+            prompt(f"Invalid entry. {message}")
+            user_input = input()
+    return user_input
+
+
 def is_valid_operation(operation, valid_operations=VALID_OPERATIONS):
-    return True if operation in valid_operations else False
+    return operation in valid_operations
 
-# Print a welcome banner.
-prompt('Welcome to Calculator!')
 
-# Ask the user for the first number.
-prompt("What's the first number?")
-number1 = input()
+def calculate(num_1, num_2, operation):
+    match operation:
+        case "1":
+            output = int(num_1) + int(num_2)
+        case "2":
+            output = int(num_1) - int(num_2)
+        case "3":
+            output = int(num_1) * int(num_2)
+        case "4":
+            output = int(num_1) / int(num_2)
+    return output
 
-while not is_valid_number(number1):
-    number1 = input()
 
-# Ask the user for the second number.
-prompt("What's the second number?")
-number2 = input()
+def main():
+    # Print a welcome banner.
+    prompt('Welcome to Calculator!')
 
-while not is_valid_number(number2):
-    number2 = input()
+    # Ask the user for the first number.
+    num_1 = get_valid_user_input("What's the first number?",
+                                 is_valid_number)
 
-# Ask the user for an operation to perform.
-prompt("What operation would you like to perform? \
-       \n1) Add 2) Subtract 3) Multiply 4) Divide")
+    # Ask the user for the second number.
+    num_2 = get_valid_user_input("What's the second number?",
+                                 is_valid_number)
 
-operation = input()
+    # Ask the user for an operation to perform.
+    operation = get_valid_user_input("What operation do you want to perform?\n"
+                                     "1) Addition  2) Subtraction  "
+                                     "3) Multiplication  4) Division",
+                                     is_valid_operation)
 
-while not is_valid_operation(operation):
-    prompt(f"Please enter one of these numbers: {', '.join(VALID_OPERATIONS)}.")
-    operation = input()
+    # Perform the operation on the two numbers.
+    output = calculate(num_1, num_2, operation)
 
-# Perform the operation on the two numbers.
-match operation:
-    case "1":
-        output = int(number1) + int(number2)
-    case "2":
-        output = int(number1) - int(number2)
-    case "3":
-        output = int(number1) * int(number2)
-    case "4":
-        output = int(number1) / int(number2)
+    # Print the result to the terminal.
+    prompt(f"The result is: {output}")
 
-# Print the result to the terminal.
-prompt(f"The result is: {output}")
+
+if __name__ == "__main__":
+    main()
