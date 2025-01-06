@@ -7,7 +7,7 @@ def prompt(message):
     print(f"==> {message}")
 
 
-def is_valid_number(num_str):
+def is_valid_number(num_str, **kwargs):
     try:
         int(num_str)
     except ValueError:
@@ -15,13 +15,12 @@ def is_valid_number(num_str):
     return True
 
 
-def get_valid_user_input(message, validation_func=None):
+def get_valid_user_input(message, validation_func, **kwargs):
     prompt(message)
     user_input = input()
-    if validation_func:
-        while not validation_func(user_input):
-            prompt(f"Invalid entry. {message}")
-            user_input = input()
+    while not validation_func(user_input, **kwargs):
+        prompt(f"Invalid entry. {message}")
+        user_input = input()
     return user_input
 
 
@@ -46,25 +45,36 @@ def main():
     # Print a welcome banner.
     prompt('Welcome to Calculator!')
 
-    # Ask the user for the first number.
-    num_1 = get_valid_user_input("What's the first number?",
-                                 is_valid_number)
+    while True:
+        # Ask the user for the first number.
+        num_1 = get_valid_user_input("What's the first number?",
+                                     is_valid_number)
 
-    # Ask the user for the second number.
-    num_2 = get_valid_user_input("What's the second number?",
-                                 is_valid_number)
+        # Ask the user for the second number.
+        num_2 = get_valid_user_input("What's the second number?",
+                                     is_valid_number)
 
-    # Ask the user for an operation to perform.
-    operation = get_valid_user_input("What operation do you want to perform?\n"
-                                     "1) Addition  2) Subtraction  "
-                                     "3) Multiplication  4) Division",
-                                     is_valid_operation)
+        # Ask the user for an operation to perform.
+        operation = get_valid_user_input("What operation do you want to do?"
+                                         "\n1) Addition  2) Subtraction  "
+                                         "3) Multiplication  4) Division",
+                                         is_valid_operation)
 
-    # Perform the operation on the two numbers.
-    output = calculate(num_1, num_2, operation)
+        # Perform the operation on the two numbers.
+        output = calculate(num_1, num_2, operation)
 
-    # Print the result to the terminal.
-    prompt(f"The result is: {output}")
+        # Print the result to the terminal.
+        prompt(f"The result is: {output}")
+
+        # Ask if the user wants to perform another calculation
+        another_calculation = get_valid_user_input("Would you like to perform "
+                                                   "another calculation?\n"
+                                                   "1) Yes  2) No ",
+                                                   is_valid_operation, 
+                                                   valid_operations=["1", "2"])
+        if another_calculation == "2":
+            prompt("Thank you. Goodbye!")
+            break
 
 
 if __name__ == "__main__":
