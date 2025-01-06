@@ -1,16 +1,22 @@
+# Helper functions
+def prompt(message):
+    print(f"==> {message}")
+
 # Print a welcome banner.
-print('Welcome to Calculator!')
+prompt('Welcome to Calculator!')
 
 # Ask the user for the first number.
-print("What's the first number?")
+prompt("What's the first number?")
 number1 = input()
 
 # Ask the user for the second number.
-print("What's the second number?")
+prompt("What's the second number?")
 number2 = input()
 
 # Ask the user for an operation to perform.
-print('What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide')
+prompt("What operation would you like to perform? \
+       \n1) Add 2) Subtract 3) Multiply 4) Divide")
+
 operation = input()
 
 # Perform the operation on the two numbers.
@@ -24,4 +30,4 @@ elif operation == "4":
     output = int(number1) / int(number2)
 
 # Print the result to the terminal.
-print(f"The result is: {output}")
+prompt(f"The result is: {output}")
