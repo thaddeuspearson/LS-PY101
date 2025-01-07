@@ -1,15 +1,22 @@
+import json
+
 # Constants
 VALID_OPERATIONS = ['1', '2', '3', '4']
 
 
 # Helper functions
+def get_message_dict(path='calculator_messages.json'):
+    with open(path, 'r') as f:
+        return json.load(f)
+
+
 def prompt(message):
     print(f"==> {message}")
 
 
-def is_valid_number(num_str, **kwargs):
+def is_valid_number(num_str):
     try:
-        int(num_str)
+        float(num_str)
     except ValueError:
         return False
     return True
@@ -31,17 +38,18 @@ def is_valid_operation(operation, valid_operations=VALID_OPERATIONS):
 def calculate(num_1, num_2, operation):
     match operation:
         case "1":
-            output = int(num_1) + int(num_2)
+            output = float(num_1) + float(num_2)
         case "2":
-            output = int(num_1) - int(num_2)
+            output = float(num_1) - float(num_2)
         case "3":
-            output = int(num_1) * int(num_2)
+            output = float(num_1) * float(num_2)
         case "4":
-            output = int(num_1) / int(num_2)
+            output = float(num_1) / float(num_2)
     return output
 
 
 def main():
+    messages = get_message_dict()
     # Print a welcome banner.
     prompt('Welcome to Calculator!')
 
@@ -70,7 +78,7 @@ def main():
         another_calculation = get_valid_user_input("Would you like to perform "
                                                    "another calculation?\n"
                                                    "1) Yes  2) No ",
-                                                   is_valid_operation, 
+                                                   is_valid_operation,
                                                    valid_operations=["1", "2"])
         if another_calculation == "2":
             prompt("Thank you. Goodbye!")
