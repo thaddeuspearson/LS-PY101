@@ -57,7 +57,7 @@ def calculate(num_1, num_2, operation):
 def main():
     # Load messages from json
     messages = get_message_dict()
-    
+
     # Print a welcome banner.
     prompt(messages["welcome"])
 
