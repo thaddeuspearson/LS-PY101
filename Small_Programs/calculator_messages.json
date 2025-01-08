@@ -5,7 +5,7 @@
       "number_prompt_2": "What's the second number?",
       "operation_prompt": "What operation do you want to do? \n1) Addition  2) Subtraction  3) Multiplication  4) Division",
       "another_op": "Would you like to perform another calculation?\n1) Yes  2) No ",
-      "result": "The result is ",
+      "result": "The result is",
       "goodbye": "Thank you. Goodbye!"
     }
 }
