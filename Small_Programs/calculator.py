@@ -1,13 +1,19 @@
 import json
 
 # Constants
+MESSAGES_PATH = './calculator_messages.json'
 VALID_OPERATIONS = ['1', '2', '3', '4']
 
 
 # Helper functions
-def get_message_dict(path='calculator_messages.json'):
+def load_messages(path=MESSAGES_PATH):
     with open(path, 'r') as f:
         return json.load(f)
+
+
+def get_message_dict(lang='en'):
+    message_dict = load_messages()
+    return message_dict[lang]
 
 
 def prompt(message):
@@ -49,38 +55,36 @@ def calculate(num_1, num_2, operation):
 
 
 def main():
+    # Load messages from json
     messages = get_message_dict()
+    
     # Print a welcome banner.
-    prompt('Welcome to Calculator!')
+    prompt(messages["welcome"])
 
     while True:
         # Ask the user for the first number.
-        num_1 = get_valid_user_input("What's the first number?",
+        num_1 = get_valid_user_input(messages["number_prompt_1"],
                                      is_valid_number)
 
         # Ask the user for the second number.
-        num_2 = get_valid_user_input("What's the second number?",
+        num_2 = get_valid_user_input(messages["number_prompt_2"],
                                      is_valid_number)
 
         # Ask the user for an operation to perform.
-        operation = get_valid_user_input("What operation do you want to do?"
-                                         "\n1) Addition  2) Subtraction  "
-                                         "3) Multiplication  4) Division",
+        operation = get_valid_user_input(messages["operation_prompt"],
                                          is_valid_operation)
 
         # Perform the operation on the two numbers.
-        output = calculate(num_1, num_2, operation)
+        result = calculate(num_1, num_2, operation)
 
         # Print the result to the terminal.
-        prompt(f"The result is: {output}")
+        prompt(f"{messages['result']}: {result}")
 
-        # Ask if the user wants to perform another calculation
-        another_calculation = get_valid_user_input("Would you like to perform "
-                                                   "another calculation?\n"
-                                                   "1) Yes  2) No ",
-                                                   is_valid_operation,
-                                                   valid_operations=["1", "2"])
-        if another_calculation == "2":
+        # Ask if the user wants to perform another calculation.
+        another_operation = get_valid_user_input(messages["another_op"],
+                                                 is_valid_operation,
+                                                 valid_operations=["1", "2"])
+        if another_operation == "2":
             prompt("Thank you. Goodbye!")
             break
 
