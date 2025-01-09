@@ -13,7 +13,7 @@ def is_odd(num):
     return abs(num) % 2 == 1
 
 
-# Testcases
+# Test Cases
 assert is_odd(5) is True, "5 is odd."
 assert is_odd(6) is False, "6 is even."
 assert is_odd(-1) is True, "The absolute value of -1 is odd."

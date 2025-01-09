@@ -1,15 +1,15 @@
 """
-Print all odd numbers from 1 to 99, inclusive, with each 
-number on a separate line. Can you solve the problem by 
+Print all odd numbers from 1 to 99, inclusive, with each
+number on a separate line. Can you solve the problem by
 iterating over just the odd numbers?
 """
 
 
-def print_odds(start=1, end=99):
+def print_odds(start, end):
     """Prints odd numbers inclusively contained within the given range.
 
-    :start (int): the number beginning the range (default 1)
-    :end (int): the number ending the range (default 99)
+    :start (int): the number beginning the range
+    :end (int): the number ending the range
     :returns (NoneType): None
     """
     start = start + 1 if start % 2 == 0 else start
@@ -19,4 +19,4 @@ def print_odds(start=1, end=99):
 
 
 # Test Cases
-assert print_odds() is None, "print_odds returns None."
+assert print_odds(1, 99) is None, "print_odds returns None."
