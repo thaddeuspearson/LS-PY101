@@ -13,6 +13,7 @@ def print_odds(start, end):
     :returns (NoneType): None
     """
     start = start + 1 if start % 2 == 0 else start
+    end = end - 1 if end % 2 == 0 else end
 
     for odd_num in range(start, end + 1, 2):
         print(odd_num)
