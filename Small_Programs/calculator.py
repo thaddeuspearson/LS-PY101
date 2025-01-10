@@ -27,6 +27,10 @@ def is_valid_number(num_str, **kwargs):
     return True
 
 
+def is_valid_operation(operation, **kwargs):
+    return operation in kwargs.get("valid_operations", [])
+
+
 def get_valid_user_input(message, validation_func, **kwargs):
     prompt(message)
     user_input = input()
@@ -34,10 +38,6 @@ def get_valid_user_input(message, validation_func, **kwargs):
         prompt(f"Invalid entry. {message}")
         user_input = input()
     return user_input
-
-
-def is_valid_operation(operation, **kwargs):
-    return operation in kwargs["valid_operations"]
 
 
 def calculate(num_1, num_2, operation):
