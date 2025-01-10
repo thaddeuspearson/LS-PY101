@@ -2,7 +2,6 @@ import json
 
 # Constants
 MESSAGES_PATH = './calculator_messages.json'
-VALID_OPERATIONS = ['1', '2', '3', '4']
 
 
 # Helper functions
@@ -37,7 +36,7 @@ def get_valid_user_input(message, validation_func, **kwargs):
     return user_input
 
 
-def is_valid_operation(operation, valid_operations=VALID_OPERATIONS):
+def is_valid_operation(operation, valid_operations=["1", "2", "3", "4"]):
     return operation in valid_operations
 
 
