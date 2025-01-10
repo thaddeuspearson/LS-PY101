@@ -19,7 +19,7 @@ def prompt(message):
     print(f"==> {message}")
 
 
-def is_valid_number(num_str):
+def is_valid_number(num_str, **kwargs):
     try:
         float(num_str)
     except ValueError:
@@ -36,8 +36,8 @@ def get_valid_user_input(message, validation_func, **kwargs):
     return user_input
 
 
-def is_valid_operation(operation, valid_operations=["1", "2", "3", "4"]):
-    return operation in valid_operations
+def is_valid_operation(operation, **kwargs):
+    return operation in kwargs["valid_operations"]
 
 
 def calculate(num_1, num_2, operation):
@@ -63,15 +63,16 @@ def main():
     while True:
         # Ask the user for the first number.
         num_1 = get_valid_user_input(messages["number_prompt_1"],
-                                     is_valid_number)
+                                     validation_func=is_valid_number)
 
         # Ask the user for the second number.
         num_2 = get_valid_user_input(messages["number_prompt_2"],
-                                     is_valid_number)
+                                     validation_func=is_valid_number)
 
         # Ask the user for an operation to perform.
         operation = get_valid_user_input(messages["operation_prompt"],
-                                         is_valid_operation)
+                                         validation_func=is_valid_operation,
+                                         valid_operations=["1", "2", "3", "4"])
 
         # Perform the operation on the two numbers.
         result = calculate(num_1, num_2, operation)
@@ -80,10 +81,10 @@ def main():
         prompt(f"{messages['result']}: {result}")
 
         # Ask if the user wants to perform another calculation.
-        another_operation = get_valid_user_input(messages["another_op"],
-                                                 is_valid_operation,
-                                                 valid_operations=["1", "2"])
-        if another_operation == "2":
+        another_op = get_valid_user_input(messages["another_op"],
+                                          validation_func=is_valid_operation,
+                                          valid_operations=["1", "2"])
+        if another_op == "2":
             prompt("Thank you. Goodbye!")
             break
 
