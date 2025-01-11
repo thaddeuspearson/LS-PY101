@@ -13,11 +13,10 @@ def print_odds(start, end):
     :returns (NoneType): None
     """
     start = start + 1 if start % 2 == 0 else start
-    end = end - 1 if end % 2 == 0 else end
 
     for odd_num in range(start, end + 1, 2):
         print(odd_num)
 
 
 # Test Cases
-assert print_odds(1, 99) is None, "print_odds returns None."
+assert print_odds(1, 102) is None, "print_odds returns None."
