@@ -13,7 +13,6 @@ def print_evens(start, end):
     :returns (NoneType): None
     """
     start = start + 1 if start % 2 == 1 else start
-    # end = end - 1 if end % 2 == 0 else end
 
     for even_num in range(start, end + 1, 2):
         print(even_num)
