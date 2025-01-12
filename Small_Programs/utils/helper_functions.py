@@ -45,14 +45,14 @@ def is_valid_number(num_str):
     return True
 
 
-def is_valid_operation(operation, **kwargs):
-    """Validates if a given operation (in string format) is in the 
+def is_valid_choice(operation, **kwargs):
+    """Validates if a given choice (in string format) is in the 
     given valid_operations (passed into kwargs).
 
     :num_str (str): a string representation of a number
     :returns (bool): True / False
     """
-    return operation in kwargs.get("valid_operations", [])
+    return operation in kwargs.get("valid_choice", [])
 
 
 def get_valid_user_input(message, validation_func, **kwargs):

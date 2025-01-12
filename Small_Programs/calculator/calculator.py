@@ -2,7 +2,7 @@ from sys import path
 from pathlib import Path
 path.append(str(Path(__file__).resolve().parent / '../utils/'))
 from helper_functions import (get_message_dict, prompt, get_valid_user_input,
-                              is_valid_number, is_valid_operation)
+                              is_valid_number, is_valid_choice)
 
 # Constants
 MESSAGES_PATH = './calculator_messages.json'
@@ -33,15 +33,15 @@ def main():
                                      validation_func=is_valid_number)
 
         operation = get_valid_user_input(messages["operation_prompt"],
-                                         validation_func=is_valid_operation,
-                                         valid_operations=["1", "2", "3", "4"])
+                                         validation_func=is_valid_choice,
+                                         valid_choices=["1", "2", "3", "4"])
 
         result = calculate(num_1, num_2, operation)
         prompt(f"{messages['result']}: {result}")
 
         another_op = get_valid_user_input(messages["another_op"],
-                                          validation_func=is_valid_operation,
-                                          valid_operations=["1", "2"])
+                                          validation_func=is_valid_choice,
+                                          valid_choices=["1", "2"])
         if another_op == "2":
             prompt("Thank you. Goodbye!")
             break
