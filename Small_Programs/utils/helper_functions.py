@@ -48,7 +48,7 @@ def is_valid_number(num_str):
 
 
 def is_valid_choice(operation, **kwargs):
-    """Validates if a given choice (in string format) is in the 
+    """Validates if a given choice (in string format) is in the
     given valid_operations (passed into kwargs).
 
     :num_str (str): a string representation of a number
@@ -74,7 +74,7 @@ def get_valid_user_input(message, validation_func, **kwargs):
 
 def get_random_choice(choices):
     """Feturns a random choice from the given choices list
-    
+
     :choices (list): a list of choices to select from
     :returns (various): a random choice from the choices list
     """
