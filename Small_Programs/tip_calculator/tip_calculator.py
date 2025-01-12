@@ -1,43 +1,11 @@
-import json
+from sys import path
+from pathlib import Path
+path.append(str(Path(__file__).resolve().parent / '../utils/'))
+from helper_functions import (get_message_dict, prompt, get_valid_user_input,
+                              is_valid_number, is_valid_operation)
 
 # Constants
 MESSAGES_PATH = './tip_calculator_messages.json'
-
-
-# Helper functions
-def load_messages(path=MESSAGES_PATH):
-    with open(path, 'r') as f:
-        return json.load(f)
-
-
-def get_message_dict(lang='en'):
-    message_dict = load_messages()
-    return message_dict[lang]
-
-
-def prompt(message):
-    print(f"==> {message}")
-
-
-def is_valid_number(num_str):
-    try:
-        float(num_str)
-    except ValueError:
-        return False
-    return True
-
-
-def is_valid_operation(operation, **kwargs):
-    return operation in kwargs.get("valid_operations", [])
-
-
-def get_valid_user_input(message, validation_func, **kwargs):
-    prompt(message)
-    user_input = input().strip("$%")
-    while not validation_func(user_input, **kwargs):
-        prompt(f"Invalid entry. {message}")
-        user_input = input().strip("$%")
-    return user_input
 
 
 def calculate_total_bill_and_tip(bill_amount, tip_percent):
@@ -49,7 +17,7 @@ def calculate_total_bill_and_tip(bill_amount, tip_percent):
 
 
 def main():
-    messages = get_message_dict()
+    messages = get_message_dict(path=MESSAGES_PATH)
     prompt(messages["welcome"])
 
     while True:
