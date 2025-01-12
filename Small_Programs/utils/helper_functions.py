@@ -1,5 +1,7 @@
 """Helper functions to be used in the Small Programs Section of LS-PY101"""
-import json
+from json import load
+from random import choice
+
 
 
 def load_messages(path):
@@ -8,7 +10,7 @@ def load_messages(path):
     :path (string): the filepath to the location of the json file
     :returns (dict): the deserialized json data loaded in a dictionary"""
     with open(path, 'r', encoding="utf-8") as f:
-        return json.load(f)
+        return load(f)
 
 
 def get_message_dict(path, lang='en'):
@@ -68,3 +70,12 @@ def get_valid_user_input(message, validation_func, **kwargs):
         prompt(f"Invalid entry. {message}")
         user_input = input().strip("$%")
     return user_input
+
+
+def get_random_choice(choices):
+    """Feturns a random choice from the given choices list
+    
+    :choices (list): a list of choices to select from
+    :returns (various): a random choice from the choices list
+    """
+    return choice(choices)
