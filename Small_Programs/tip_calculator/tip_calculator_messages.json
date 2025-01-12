@@ -1,0 +1,11 @@
+{
+  "en": {
+    "welcome": "Welcome to Tip Calculator!",
+    "bill_amount_prompt": "What's the bill amount (tax included)?",
+    "tip_percent_prompt": "What's the tip percentage?",
+    "tip_total": "The tip is",
+    "bill_total": "The total bill including the tip is",
+    "another_op": "Would you like to perform another monthly payment calculation?\n1) Yes  2) No ",
+    "goodbye": "Thank you. Goodbye!"
+  }
+}
