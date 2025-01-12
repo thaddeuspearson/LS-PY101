@@ -52,7 +52,7 @@ def is_valid_choice(operation, **kwargs):
     :num_str (str): a string representation of a number
     :returns (bool): True / False
     """
-    return operation in kwargs.get("valid_choice", [])
+    return operation in kwargs.get("valid_choices", [])
 
 
 def get_valid_user_input(message, validation_func, **kwargs):
