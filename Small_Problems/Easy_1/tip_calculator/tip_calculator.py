@@ -1,6 +1,6 @@
 from sys import path
-from pathlib import Path
-path.append(str(Path(__file__).parent/'../../../Small_Programs/utils/'))
+from pathlib import Path as p
+path.append(str(p(__file__).parent/'../../../Lesson_2/Small_Programs/utils/'))
 from helper_functions import (get_message_dict, prompt, get_valid_user_input,
                               is_valid_number, is_valid_choice)
 

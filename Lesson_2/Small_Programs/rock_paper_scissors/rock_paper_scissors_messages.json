@@ -1,0 +1,14 @@
+{
+    "en": {
+      "welcome": "Welcome to Rock Paper Scissors!",
+      "choice_prompt": "Please type one of the following",
+      "player_choice": "You have selected",
+      "computer_choice": "The computer selected",
+      "tie_round": "Tie round. Redo!",
+      "round_winner": "The winner of round",
+      "current_score": "The current score is",
+      "game_over": "The game is now over after round number",
+      "another_game": "Do you want to play again? (y/n)",
+      "goodbye": "Thank you. Goodbye!"
+    }
+}
