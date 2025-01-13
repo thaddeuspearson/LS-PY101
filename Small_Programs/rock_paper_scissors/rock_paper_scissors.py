@@ -1,9 +1,13 @@
+"""
+Classic rock / paper / scissors Game playable from the cmd line. Also supports
+the lizard / spock variation as a tribute to The Big Bang Theory TV show
+"""
+# pylint: disable=import-error, wrong-import-position
 from sys import path
 from pathlib import Path
 path.append(str(Path(__file__).resolve().parent / '../utils/'))
 from helper_functions import (get_message_dict, prompt, get_valid_user_input,
-                              is_valid_number, is_valid_choice,
-                              get_random_choice)
+                              is_valid_choice, get_random_choice)
 
 
 # Constants
@@ -37,6 +41,9 @@ def calculate_winner(player_choice, computer_choice):
 
 
 def main():
+    """Driver function for the rock / paper / scissors game
+    :returns (NoneType): None
+    """
     messages = get_message_dict(path=MESSAGES_PATH)
     prompt(messages['welcome'])
 
