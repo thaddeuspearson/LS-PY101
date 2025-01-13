@@ -8,21 +8,31 @@ from helper_functions import (get_message_dict, prompt, get_valid_user_input,
 
 # Constants
 MESSAGES_PATH = './rock_paper_scissors_messages.json'
-VALID_CHOICES = ["rock", "paper", "scissors"]
+VALID_CHOICES = ["rock", "paper", "scissors", "lizard", "spock"]
 
 
 def calculate_winner(player_choice, computer_choice):
-    """Calculaters a winer for rock, paper, scissors
+    """Calculaters a winer for rock, paper, scissors, lizard spock (rpsls)
 
     :player_choice (str): the player's choice
     :computer_choice (str): the computer's choice
     :returns winner (string): "player"/"computer"/"tie"
     """
-    if ((player_choice == "rock" and computer_choice == "scissors") or
-        (player_choice == "paper" and computer_choice == "rock") or
-        (player_choice == "scissors" and computer_choice == "paper")):
+    rpsls_win_conditions = {
+        "rock": ["scissors", "lizard"],
+        "paper": ["rock", "spock"],
+        "scissors": ["paper", "lizard"],
+        "lizard": ["spock", "paper"],
+        "spock": ["scissors", "rock"]
+    }
+
+    if computer_choice in rpsls_win_conditions[player_choice]:
         winner = "player"
-    winner = "tie" if player_choice == computer_choice else "computer"
+    elif player_choice == computer_choice:
+        winner = "tie"
+    else:
+        winner = "computer"
+
     return winner
 
 
