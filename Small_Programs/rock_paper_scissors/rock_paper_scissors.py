@@ -13,16 +13,7 @@ from helper_functions import (get_message_dict, prompt, get_valid_user_input,
 # Constants
 MESSAGES_PATH = './rock_paper_scissors_messages.json'
 VALID_CHOICES = ["rock", "paper", "scissors", "lizard", "spock"]
-
-
-def calculate_winner(player_choice, computer_choice):
-    """Calculaters a winer for rock, paper, scissors, lizard spock (rpsls)
-
-    :player_choice (str): the player's choice
-    :computer_choice (str): the computer's choice
-    :returns winner (string): "player"/"computer"/"tie"
-    """
-    rpsls_win_conditions = {
+WIN_CONDITIONS = {
         "rock": ["scissors", "lizard"],
         "paper": ["rock", "spock"],
         "scissors": ["paper", "lizard"],
@@ -30,7 +21,16 @@ def calculate_winner(player_choice, computer_choice):
         "spock": ["scissors", "rock"]
     }
 
-    if computer_choice in rpsls_win_conditions[player_choice]:
+
+def calculate_winner(player_choice, computer_choice, win_conditions):
+    """Calculaters a winer for rock, paper, scissors, lizard spock (rpsls)
+
+    :player_choice (str): the player's choice
+    :computer_choice (str): the computer's choice
+    :win_conditions (dict): the conditions necessary to win the game
+    :returns winner (string): "player"/"computer"/"tie"
+    """
+    if computer_choice in win_conditions[player_choice]:
         winner = "player"
     elif player_choice == computer_choice:
         winner = "tie"
@@ -57,7 +57,8 @@ def main():
         computer_choice = get_random_choice(VALID_CHOICES)
         prompt(f"{messages['computer_choice']}: {computer_choice}")
 
-        winner = calculate_winner(player_choice, computer_choice)
+        winner = calculate_winner(player_choice, computer_choice,
+                                  win_conditions=WIN_CONDITIONS)
         prompt(f"{messages['winner']}: {winner}")
 
         another_round = get_valid_user_input(messages["another_round"],
