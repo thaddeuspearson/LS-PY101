@@ -49,7 +49,7 @@ def main():
 
         another_op = get_valid_user_input(messages["another_op"],
                                           validation_func=is_valid_choice,
-                                          valid_operations=["1", "2"])
+                                          valid_choices=["1", "2"])
         if another_op == "2":
             prompt("Thank you. Goodbye!")
             break
