@@ -1,3 +1,10 @@
+"""
+Create a simple tip calculator. The program should prompt for a bill amount
+and a tip rate. The program must compute the tip, then print both the tip
+and the total amount of the bill. You can ignore input validation and assume
+that the user will enter valid numbers.
+"""
+# pylint: disable=import-error, wrong-import-position
 from sys import path
 from pathlib import Path as p
 path.append(str(p(__file__).parent/'../../../Lesson_2/Small_Programs/utils/'))
@@ -9,6 +16,13 @@ MESSAGES_PATH = './tip_calculator_messages.json'
 
 
 def calculate_total_bill_and_tip(bill_amount, tip_percent):
+    """Calculates the total bill and tip from a given bill amount and a tip 
+    percentage.
+
+    :bill_amount (float): the total of the bill (tax included)
+    :tip_percent (float): the percent rate of the tip to be calculated
+    :returns bill_total, tip_total (tuple): the total bill and total tip amount
+    """
     bill_amount = float(bill_amount)
     tip_percent = float(tip_percent) * .01
     tip_total = round((bill_amount * tip_percent), 2)
@@ -17,6 +31,7 @@ def calculate_total_bill_and_tip(bill_amount, tip_percent):
 
 
 def main():
+    """Main driver function"""
     messages = get_message_dict(path=MESSAGES_PATH)
     prompt(messages["welcome"])
 
