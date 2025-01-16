@@ -1,0 +1,10 @@
+{
+  "en": {
+    "welcome": "Welcome to Sum of Product of Consecutive Integers!",
+    "input_integer_prompt": "Please enter an integer value greater than 0:",
+    "sum_or_product_prompt": "Please enter sum or product to select the desired operation:",
+    "result": "The result is",
+    "another_op": "Would you like to perform another sum or product?\n1) Yes  2) No ",
+    "goodbye": "Thank you. Goodbye!"
+  }
+}
