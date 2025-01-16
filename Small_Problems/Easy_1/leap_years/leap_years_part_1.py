@@ -28,19 +28,20 @@ def is_leap_year(year):
 
 """CODE EXPLAINATION
 On line 19, the function is_leap_year is defined, with a parameter called year.
-The Ternary statement handles the control flow for this function.
+Since there is only one condition where year is a leap year, a single return
+statement that tests for boolean conditions is sufficient to solve this.
 
-If statement of the ternary, the modulo operator is used to check if both
-4 is a factor and 100 is not a factor of year. When using the modulo operator,
-if the remainder of the expression is 0, then the divisor is a factor of the
-dividend, and if the remainder is greater than 0, it is not a factor. Since the
-logical operator `and` is used between these 2 expressions, both must evaluate
-to True in order for the whole statement on the left side of the `or` logical
-operator to evaluate to True. The right side of the `or` uses the same tactic,
-by checking if 400 is a factor of year.
+On the left side of the logical `or` statement, the modulo operator is used to
+check if both 4 is a factor and 100 is not a factor of year. When using the
+modulo operator,if the remainder of the expression is 0, then the divisor is a
+factor of the dividend, and if the remainder is greater than 0, it is not a
+factor. Since the logical operator `and` is used between these 2 expressions,
+both must evaluate to True in order for the whole statement on the left side 
+of the `or` logical operator to evaluate to True. The right side of the `or`
+uses the same tactic, by checking if 400 is a factor of year.
 
-Any other case is taken care of by the else statement at the end of the ternary
-in which case False is returned, since those years are not leap years.
+As long as one of these sides evaluates to True, then the function will return
+the correct boolean value, either True or False accordingly.
 """
 
 
