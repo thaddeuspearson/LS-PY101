@@ -3,7 +3,6 @@ from json import load
 from random import choice
 
 
-
 def load_messages(path):
     """Loads a json file from the given path
 
