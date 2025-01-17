@@ -18,10 +18,10 @@ def utf16_value(string):
 """CODE EXPLAINATION
 On line 9, the function utf16_value is defined with a single parameter
 named string. When this function is called with a string argument, the
-sum built-in function is called on a list comprehension. The list 
-comprehension loops through each character in string, and uses the ord 
+sum built-in function is called on a list comprehension. The list
+comprehension loops through each character in string, and uses the ord
 built-in function to return the UTF-16 value for the character, and
-append this value to the resulting list. When the loop has finished the
+append this value to the resulting list. When the loop has finished, the
 final list is passed to the sum function, and resulting sum is returned.
 """
 
