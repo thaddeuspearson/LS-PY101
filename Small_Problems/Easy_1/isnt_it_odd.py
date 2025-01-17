@@ -14,8 +14,9 @@ def is_odd(num):
 
 
 # Test Cases
-assert is_odd(5) is True, "5 is odd."
-assert is_odd(6) is False, "6 is even."
-assert is_odd(-1) is True, "The absolute value of -1 is odd."
-assert is_odd(-2) is False, "The absolute value of -2 is even."
-assert is_odd(0) is False, "The absolute value of 0 is even."
+if __name__ == "__main__":
+    assert is_odd(5), "5 is odd."
+    assert not is_odd(6), "6 is even."
+    assert is_odd(-1), "The absolute value of -1 is odd."
+    assert not is_odd(-2), "The absolute value of -2 is even."
+    assert not is_odd(0), "The absolute value of 0 is even."

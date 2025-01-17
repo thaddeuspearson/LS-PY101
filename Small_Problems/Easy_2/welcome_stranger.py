@@ -6,6 +6,7 @@ two keys, "title" and "occupation", and the appropriate values.
 Your function should return a greeting that uses the person's full
 name, and mentions the person's title.
 """
+import sys
 
 
 def greetings(name_list, occupation_dict):
@@ -22,7 +23,7 @@ def greetings(name_list, occupation_dict):
 
 
 """CODE EXPLAINATION
-On line 11, the greetings function is defined with two parameters,
+On line 12, the greetings function is defined with two parameters,
 name_list and occupation_dict. Upon execution, with a list of strings
 passed to name_list and a dictionary (containing a title to occupation
 key, value pair) as arguments, this function uses string interpolation
@@ -41,10 +42,15 @@ perform the concatenation, and return the final concatenated string.
 
 # Test Cases
 if __name__ == "__main__":
-    GREETING = greetings(
-        ["John", "Q", "Doe"],
-        {"title": "Master", "occupation": "Plumber"}
-    )
-    assert GREETING == (
-        "Hello, John Q Doe! Nice to have a Master Plumber around."
-    )
+    args = sys.argv[1:]
+    if args and args[0] == "test":
+        # Test Cases
+        GREETING = greetings(
+            ["John", "Q", "Doe"],
+            {"title": "Master", "occupation": "Plumber"}
+        )
+        assert GREETING == (
+            "Hello, John Q Doe! Nice to have a Master Plumber around."
+        )
+    else:
+        print(greetings())

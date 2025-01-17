@@ -19,4 +19,5 @@ def print_evens(start, end):
 
 
 # Test Cases
-assert print_evens(1, 102) is None, "print_evens returns None."
+if __name__ == "__main__":
+    assert print_evens(1, 102) is None, "print_evens returns None."

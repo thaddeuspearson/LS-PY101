@@ -19,4 +19,5 @@ def print_odds(start, end):
 
 
 # Test Cases
-assert print_odds(1, 102) is None, "print_odds returns None."
+if __name__ == "__main__":
+    assert print_odds(1, 102) is None, "print_odds returns None."

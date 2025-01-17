@@ -3,6 +3,7 @@ Write a program that asks for user's name, then greets the user.
 If the user appends a ! to their name, the computer will yell the 
 greeting (print it using all uppercase).
 """
+import sys 
 
 
 def greet_user(input_str=""):
@@ -21,12 +22,12 @@ def greet_user(input_str=""):
 
 
 """CODE EXPLAINATION
-On line 8, a function greet_user is defined with a single parameter
+On line 9, a function greet_user is defined with a single parameter
 input_str, which has a default value of an empty string.
 
 In the case no string is passed as an argument to input_str, the user
 is prompted to enter their name from the command line. This condition
-is checked on line 15, and inout_str is reassigned to the result of
+is checked on line 16, and inout_str is reassigned to the result of
 calling the input function, which returns the user input as a string.
 
 The next if conditional statement checks to see if the input_str ends
@@ -38,7 +39,11 @@ greeting is returned.
 """
 
 
-# Test Cases
 if __name__ == "__main__":
-    assert greet_user("Sue") == "Hello Sue."
-    assert greet_user("Bob!") == "HELLO BOB! WHY ARE WE YELLING?"
+    # Test Cases
+    args = sys.argv[1:]
+    if args and args[0] == "test":
+        assert greet_user("Sue") == "Hello Sue."
+        assert greet_user("Bob!") == "HELLO BOB! WHY ARE WE YELLING?"
+    else:
+        print(greet_user())
