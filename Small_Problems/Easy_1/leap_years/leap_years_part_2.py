@@ -24,6 +24,7 @@ def is_leap_year(year):
         if year >= 1752 else year % 4 == 0
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 15, the function is_leap_year is defined with one parameter named year.
 The control flow necessry for this program is capable of being expressed as a

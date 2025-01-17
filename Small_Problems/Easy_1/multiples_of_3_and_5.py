@@ -17,6 +17,7 @@ def multisum(end_num):
     return sum([n for n in range(1, end_num+1) if (n % 3 == 0 or n % 5 == 0)])
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 11, the function multisum is defined with a single parameter called
 end_num, which expects an integer value when multisum is called. This function

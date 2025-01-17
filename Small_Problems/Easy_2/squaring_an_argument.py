@@ -15,6 +15,7 @@ def square(num):
     return multiply(num, num)
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 6, the multiply function is imported from the 
 multiplying_two_numbers.py exercise script.

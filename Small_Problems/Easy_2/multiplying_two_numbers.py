@@ -14,6 +14,7 @@ def multiply(num_1, num_2):
     return num_1 * num_2
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 7, the multiply finction is defined with two parameters,
 num_1 and num_2. When executed with two number types passed to

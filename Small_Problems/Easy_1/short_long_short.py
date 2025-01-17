@@ -12,6 +12,7 @@ def short_long_short(str_1, str_2):
     return min_s + max_s + min_s
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 8, a function called short_long_short is defined. This function has 2
 parameters, str_1, and str_2. On line 10, a ternary statement sets the values

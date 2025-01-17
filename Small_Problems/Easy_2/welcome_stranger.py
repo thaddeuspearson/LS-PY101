@@ -22,6 +22,7 @@ def greetings(name_list, occupation_dict):
     )
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 12, the greetings function is defined with two parameters,
 name_list and occupation_dict. Upon execution, with a list of strings

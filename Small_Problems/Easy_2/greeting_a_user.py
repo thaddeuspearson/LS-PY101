@@ -21,6 +21,7 @@ def greet_user(input_str=""):
     return f"Hello {input_str}."
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 9, a function greet_user is defined with a single parameter
 input_str, which has a default value of an empty string.

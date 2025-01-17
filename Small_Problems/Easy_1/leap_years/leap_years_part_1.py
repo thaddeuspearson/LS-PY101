@@ -26,6 +26,7 @@ def is_leap_year(year):
     return (year % 4 == 0 and year % 100 > 0) or year % 400 == 0
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 19, the function is_leap_year is defined, with a parameter called year.
 Since there is only one condition where year is a leap year, a single return

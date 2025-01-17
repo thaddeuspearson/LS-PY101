@@ -15,6 +15,7 @@ def utf16_value(string):
     return sum([ord(char) for char in string])
 
 
+# pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
 On line 9, the function utf16_value is defined with a single parameter
 named string. When this function is called with a string argument, the
