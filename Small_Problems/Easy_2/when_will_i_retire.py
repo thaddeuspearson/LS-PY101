@@ -25,9 +25,26 @@ def get_years_until_retirement_str(curr_age="", retirement_age=""):
     return (f"It's {curr_year}. You will retire in {retirement_year}.\n"
             f"You have only {years_to_go} years of work to go!")
 
+
 # pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
+On line 6, we import datetime from the datetime module. Then on line 9, the
+get_years_until_retirement_str is defined with two parameters, curr_age and
+retirement_age.
 
+The first two if conditional blocks check to see if curr_age and retirement_age
+have had any arguments pased to them during execution, and if not, they prompt
+the user with distinct calls to the built-in function input().
+
+On line 21, local variable current_year is assigned to the value of the current
+year using the datetime.now() function, (and accessing the .year property)from
+the datetime module. On line 22, years_to_go is calculated by casting the
+retirement_age and curr_age arguments, and assigning the result to years_to_go.
+The retirement_year is calculated from adding yeare_to_go to the integer
+representation of curr_year.
+
+Finally, on line 25, string interpolation is used to insert the necessary
+variables into the f-string that is returned.
 """
 
 
