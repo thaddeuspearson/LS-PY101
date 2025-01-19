@@ -33,7 +33,16 @@ def create_madlib(noun='', verb='', adjective='', adverb=''):
 
 # pylint: disable=pointless-string-statement
 """CODE EXPLAINATION
+On line 8, the create_madlib function is defined with four parameters,
+noun, verb, adjective, and adverb.
+There are four if conditional statements that test for any arguments
+passed to any of the 4 parameters at execution. In the case that any of
+them are still empty strings, the user is prompted to provide their value
+via the input built-in function.
 
+the return statement on line 27 uses f-strings and interpolation to correctly
+add the variables into the return string. Once the string is fully formatted,
+it is returned.
 """
 
 
