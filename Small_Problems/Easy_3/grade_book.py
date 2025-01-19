@@ -34,7 +34,7 @@ score_2, and score_3. On line 16, the local variable average is created
 and assigned to the value of the average of the three score arguments
 passed during execution, floor divided by 3.
 
-The if/elif/else condirional block beginning on line 18 then uses
+The if/elif/else conditional block beginning on line 18 then uses
 short-circuiting by comparing average to each letter grade's minimal score,
 with the highest score at the top of the block, and the least at the bottom.
 This control flow order guarentees that the correct letter grade will be
