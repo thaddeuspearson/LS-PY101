@@ -46,47 +46,70 @@
 - `f'Blah {expression} blah.'`
 - Python replaces the `{expression}` substring with the value of the expression inside the braces: it interpolates the expression's value.
 
-## string methods
+### string methods
 
-1.  `capitalize`, `swapcase`, `upper`, `lower`
+- [`capitalize`](https://www.w3schools.com/python/ref_string_capitalize.asp), [`swapcase`](https://www.w3schools.com/python/ref_string_swapcase.asp), [`upper`](https://www.w3schools.com/python/ref_string_upper.asp), [`lower`](https://www.w3schools.com/python/ref_string_lower.asp)
 
-1.  `isalpha`, `isdigit`, `isalnum`, `islower`, `isupper`, `isspace`
+- [`isalpha`](https://www.w3schools.com/python/ref_string_isalpha.asp), [`isdigit`](https://www.w3schools.com/python/ref_string_isdigit.asp), [`isalnum`](https://www.w3schools.com/python/ref_string_isalnum.asp), [`islower`](https://www.w3schools.com/python/ref_string_islower.asp), [`isupper`](https://www.w3schools.com/python/ref_string_isupper.asp), [`isspace`](https://www.w3schools.com/python/ref_string_isspace.asp)
 
-1.  `strip`, `rstrip`, `lstrip`, `replace`
+- [`strip`](https://www.w3schools.com/python/ref_string_strip.asp), [`rstrip`](https://www.w3schools.com/python/ref_string_rstrip.asp), [`lstrip`](https://www.w3schools.com/python/ref_string_lstrip.asp), [`replace`](https://www.w3schools.com/python/ref_string_replace.asp)
 
-1.  `split`, `find`, `rfind`
+- [`split`](https://www.w3schools.com/python/ref_string_split.asp), [`find`](https://www.w3schools.com/python/ref_string_find.asp), [`rfind`](https://www.w3schools.com/python/ref_string_rfind.asp)
 
-### boolean vs. truthiness
+## [boolean](https://launchschool.com/books/python/read/data_types#booleanvalues) vs. [truthiness](https://launchschool.com/books/python/read/flow_control#truthiness)
 
-### `None`
+### Booleans
+- Primitive data type
+- `True` or `False`
+- Evaluate to `1` and `0` respectively
 
-### ranges
+### Truthiness
+- Arise in conditional expressions, such as `if` and `while` statements
+- Falsey values: `False`, `None`, `0`, `''`,`[]`, `()`, `{}`, `set()`, `frozenset()`, and `range(0)`
+- Everything else is truthy
 
-### list and dictionary syntax
+
+
+## [`None`](https://launchschool.com/books/python/read/data_types#none)
+- A way to express the absence of a value.
+
+## [ranges](https://launchschool.com/books/python/read/data_types#sequences)
+- A sequence of integers between two endpoints.
+- With one argument, the range starts from 0 and ends just before the argument.
+- With two arguments, the first argument is the starting point, while the second argument is one past the last number in the range.
+- With three arguments, the 3rd argument is a step value.
+- Ranges are homogenous; they always contain integers.
+- immutable
+
+## [lists](https://launchschool.com/books/python/read/intro_collections#whatsequences)
+-
+- Lists and tuples are heterogeneous; they may contain different kinds of objects, including other sequences
+- mutable
 
 ### list methods 
-1. `len(list)`, `list.append()`, `list.pop()`, `list.reverse()`
+1. [`len(list)`](), [`list.append()`](), [`list.pop()`](), [`list.reverse()`]()
 
+## [dictionaries]()
 ### dictionary methods
-1.  `dict.keys()`, `dict.values()`, `dict.items()`, `dict.get()`
+1.  [`dict.keys()`](), [`dict.values()`](), [`dict.items()`](), [`dict.get()`]()
 
 ### slicing (strings, lists, tuples)
 
 ### operators
 
-1.  Arithmetic: `+`, `-`, `*`, `/`, `//`, `%`, `**`
+1.  [Arithmetic](): `+`, `-`, `*`, `/`, `//`, `%`, `**`
 
-1.  String operators: `+`
+1.  [String operators](): `+`
 
-1.  List operators: `+`
+1.  [List operators](): `+`
 
-1.  Comparison: `==,` `!=`, `&lt;`, `&gt;`, `&lt;=`, `&gt;=`
+1.  [Comparison](): `==,` `!=`, `&lt;`, `&gt;`, `&lt;=`, `&gt;=`
 
-1.  Logical: `and`, `or`, `not`
+1.  [Logical](): `and`, `or`, `not`
 
-1.  Identity: `is`, `is not`
+1.  [Identity](): `is`, `is not`
 
-1.  operator precedence
+1.  [operator precedence]()
 
 ### mutability and immutability
 
@@ -98,7 +121,7 @@
 
 1.  scope
 
-1.  `global` keyword
+1.  [`global`]() keyword
 
 1.  variables as pointers
 
@@ -106,11 +129,11 @@
 
 ### conditionals and loops
 
-1.  `for`
+1.  [`for`]()
 
-1.  `while`
+1.  [`while`]()
 
-### `print()` and `input()`
+### [`print()`]() and [`input()`]()
 
 ### exceptions (when they will occur and how to handle them)
 
