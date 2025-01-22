@@ -81,13 +81,14 @@
 - Ranges are homogenous; they always contain integers.
 - immutable
 
-## [lists](https://launchschool.com/books/python/read/intro_collections#whatsequences)
--
+## [lists](https://launchschool.com/books/python/read/data_types#sequences)
+- The order of the elements is significant.
 - Lists and tuples are heterogeneous; they may contain different kinds of objects, including other sequences
 - mutable
 
 ### list methods 
-1. [`len(list)`](), [`list.append()`](), [`list.pop()`](), [`list.reverse()`]()
+1. [`len(list)`](https://www.w3schools.com/python/ref_func_len.asp), [`list.append()`](https://www.w3schools.com/python/ref_list_append.asp), [`list.pop()`](https://www.w3schools.com/python/ref_list_pop.asp), [`list.reverse()`](https://www.w3schools.com/python/ref_list_reverse.asp)
+
 
 ## [dictionaries]()
 ### dictionary methods
