@@ -79,66 +79,77 @@
 - With two arguments, the first argument is the starting point, while the second argument is one past the last number in the range.
 - With three arguments, the 3rd argument is a step value.
 - Ranges are homogenous; they always contain integers.
-- immutable
+- immutable.
 
 ## [lists](https://launchschool.com/books/python/read/data_types#sequences)
 - The order of the elements is significant.
-- Lists and tuples are heterogeneous; they may contain different kinds of objects, including other sequences
-- mutable
+- Lists and tuples are heterogeneous; they may contain different kinds of objects, including other sequences.
+- mutable.
 
 ### list methods 
-1. [`len(list)`](https://www.w3schools.com/python/ref_func_len.asp), [`list.append()`](https://www.w3schools.com/python/ref_list_append.asp), [`list.pop()`](https://www.w3schools.com/python/ref_list_pop.asp), [`list.reverse()`](https://www.w3schools.com/python/ref_list_reverse.asp)
+- [`len(list)`](https://www.w3schools.com/python/ref_func_len.asp), [`list.append()`](https://www.w3schools.com/python/ref_list_append.asp), [`list.pop()`](https://www.w3schools.com/python/ref_list_pop.asp), [`list.reverse()`](https://www.w3schools.com/python/ref_list_reverse.asp)
 
 
-## [dictionaries]()
+## [dictionaries](https://launchschool.com/books/python/read/data_types#mappings)
+- A collection of key-value pairs.
+- Uses keys to access specific elements.
+- Keys are not guarenteed to be in a specific order.
+- mutable.
+
 ### dictionary methods
-1.  [`dict.keys()`](), [`dict.values()`](), [`dict.items()`](), [`dict.get()`]()
+1.  [`dict.keys()`](https://www.w3schools.com/python/ref_dictionary_keys.asp), [`dict.values()`](https://www.w3schools.com/python/ref_dictionary_values.asp), [`dict.items()`](https://www.w3schools.com/python/ref_dictionary_items.asp), [`dict.get()`](https://www.w3schools.com/python/ref_dictionary_get.asp)
 
-### slicing (strings, lists, tuples)
+## [slicing (strings, lists, tuples)](https://launchschool.com/books/python/read/using_collections#slicing)
+- uses bracket notation `[]` at the end of the given sequence
+- `seq[start:stop:step]`
+    - start is inclusive
+    - stop is exclusive
+    - step controls the direction and frequency of iteration
+- negative indexes count from the end of the sequence and go backwards
 
-### operators
+## [operators](https://launchschool.com/books/python/read/basic_ops)
 
-1.  [Arithmetic](): `+`, `-`, `*`, `/`, `//`, `%`, `**`
+1.  [Arithmetic](https://launchschool.com/books/python/read/basic_ops#arithmeticoperations): `+`, `-`, `*`, `/`, `//`, `%`, `**`
 
-1.  [String operators](): `+`
+1.  [String operators](https://launchschool.com/books/python/read/basic_ops#stringconcatenation): `+`, `*`
 
 1.  [List operators](): `+`
 
-1.  [Comparison](): `==,` `!=`, `&lt;`, `&gt;`, `&lt;=`, `&gt;=`
+1.  [Comparison](https://launchschool.com/books/python/read/flow_control#comparisons): `==,` `!=`, `&lt;`, `&gt;`, `&lt;=`, `&gt;=`
 
-1.  [Logical](): `and`, `or`, `not`
+1.  [Logical](https://launchschool.com/books/python/read/flow_control#logicaloperators): `and`, `or`, `not`
 
-1.  [Identity](): `is`, `is not`
+1.  [Identity](https://launchschool.com/books/python/read/variables_pointers#equality): `is`, `is not`
 
-1.  [operator precedence]()
+1.  [operator precedence](https://launchschool.com/books/python/read/flow_control#logicaloperatorprecedence)
 
-### mutability and immutability
+## mutability and immutability
 
-### variables
+## variables
 
-1.  naming conventions
+1.  [naming conventions](https://launchschool.com/books/python/read/variables#namingconventions)
 
-1.  initialization, assignment, and reassignment
+1.  [initialization, assignment, and reassignment](https://launchschool.com/books/python/read/variables#creatingandreassigningvariables)
 
-1.  scope
+1.  [scope](https://launchschool.com/books/python/read/functions_methods#scope)
 
-1.  [`global`]() keyword
+1.  [`global`](https://launchschool.com/books/python/read/more_stuff#globalnonlocalstatements)
 
-1.  variables as pointers
+1.  [variables as pointers](https://launchschool.com/books/python/read/variables_pointers#variablesaspointers)
 
-1.  variable shadowing
+1.  [variable shadowing](https://launchschool.com/books/python/read/functions_methods#scope)
 
-### conditionals and loops
+## conditionals and loops
 
-1.  [`for`]()
+1.  [`for`](https://launchschool.com/books/python/read/loops_iterating#forloops)
 
-1.  [`while`]()
+1.  [`while`](https://launchschool.com/books/python/read/loops_iterating#whileloops)
 
-### [`print()`]() and [`input()`]()
+## [`print()`]() and [`input()`](https://launchschool.com/books/python/read/input_output#terminalinput)
 
-### exceptions (when they will occur and how to handle them)
+## exceptions (when they will occur and how to handle them)
 
-### Functions:
+## Functions:
 
 1.  definitions and calls
 
@@ -150,5 +161,9 @@
 
 1.  output vs. return values, side effects
 
-### expressions and statements
+## [expressions and statements]()
+
+### expressions
+
+### statements
 
