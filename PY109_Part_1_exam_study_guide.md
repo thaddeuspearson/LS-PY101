@@ -147,8 +147,68 @@
 
 ## [`print()`]() and [`input()`](https://launchschool.com/books/python/read/input_output#terminalinput)
 
-## exceptions (when they will occur and how to handle them)
+## [exceptions](https://launchschool.com/lessons/a29e9831/assignments/378f8121) (when they will occur and how to handle them)
 
+### NameError
+- A `NameError` arises when you attempt to use a variable or function that hasn't been defined.
+
+    ```python
+    a        # Referencing an undefined variable results in a NameError.
+    a()      # The same applies when trying to call an undefined function.
+    ```
+
+### TypeError
+- A `TypeError` occurs when a value of the wrong type is used in an expression.
+
+    ```python
+    my_str = "abc"
+    my_str.find(42)  # TypeError: must be str, not int
+
+    my_int = 42
+    my_int()        # TypeError: 'int' object is not callable
+    ```
+
+### SyntaxError
+- A SyntaxError occurs when Python encounters code that does not meet its syntactic rules.
+
+    ```
+    print('hello)   # SyntaxError: unterminated string
+
+    def (   # SyntaxError: unexpected EOF while parsing
+    ```
+
+### ValueError
+- A `ValueError` is raised when a function receives an argument of the correct data type, but the value of the argument is inappropriate for the operation.
+
+    ```python
+    number = int("abc") # ValueError: invalid literal for int() with base 10: 'abc'
+    ```
+
+### IndexError
+- An `IndexError` occurs when trying to access an index of a sequence *(like a list or string)* that is outside the range of valid indexes.
+
+    ```python
+    nums = [1,2]
+    num = nums[2]   # IndexError: list index out of range
+    ```
+
+### KeyError
+- A KeyError is raised when trying to access a dictionary key that doesn't exist.
+
+    ```python
+    my_dict = {"a": 1, "b": 2}
+    value = my_dict["c"] # KeyError: 'c'
+    ```
+
+### ZeroDivisionError
+- A ZeroDivisionError occurs when attempting to divide by zero or when trying to use 0 on the right side of the modulo (`%`) operator.
+
+    ```python
+    result1 = 10 / 0    # ZeroDivisionError: division by zero
+    result2 = 42 % 0    # ZeroDivisionError: integer modulo by zero
+    ```
+
+    
 ## Functions:
 
 1.  [definitions](https://launchschool.com/books/python/read/functions_methods#creatingfunctions) and [calls](https://launchschool.com/books/python/read/functions_methods#callingfunctions)
