@@ -91,9 +91,9 @@
 
 
 ## [dictionaries](https://launchschool.com/books/python/read/data_types#mappings)
-- A collection of key-value pairs.
+- A unordered collection of key-value pairs.
 - Uses keys to access specific elements.
-- Keys are not guarenteed to be in a specific order.
+- **Insertion order is preserved.**
 - mutable.
 
 ### dictionary methods
@@ -151,17 +151,17 @@
 
 ## Functions:
 
-1.  definitions and calls
+1.  [definitions](https://launchschool.com/books/python/read/functions_methods#creatingfunctions) and [calls](https://launchschool.com/books/python/read/functions_methods#callingfunctions)
 
-1.  return values
+1.  [return values](https://launchschool.com/books/python/read/functions_methods#returnvalues)
 
-1.  parameters vs. arguments
+1.  [parameters vs. arguments](https://launchschool.com/books/python/read/functions_methods#argumentsparameters)
 
-1.  nested functions
+1.  [nested functions](https://launchschool.com/books/python/read/more_stuff#nestedfunctions)
 
-1.  output vs. return values, side effects
+1.  [output vs. return values](https://launchschool.com/books/python/read/basic_ops#outputvsreturnvalues), side effects
 
-## [expressions and statements]()
+## [expressions and statements](https://launchschool.com/books/python/read/basic_ops#expressionsandstatements)
 
 ### expressions
 
