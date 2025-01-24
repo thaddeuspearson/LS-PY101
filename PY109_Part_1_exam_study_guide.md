@@ -46,7 +46,7 @@
 - `f'Blah {expression} blah.'`
 - Python replaces the `{expression}` substring with the value of the expression inside the braces: it interpolates the expression's value.
 
-### string methods
+### [string methods](https://launchschool.com/books/python/read/using_collections#stringoperations)
 
 - [`capitalize`](https://www.w3schools.com/python/ref_string_capitalize.asp), [`swapcase`](https://www.w3schools.com/python/ref_string_swapcase.asp), [`upper`](https://www.w3schools.com/python/ref_string_upper.asp), [`lower`](https://www.w3schools.com/python/ref_string_lower.asp)
 
@@ -68,8 +68,6 @@
 - Falsey values: `False`, `None`, `0`, `''`,`[]`, `()`, `{}`, `set()`, `frozenset()`, and `range(0)`
 - Everything else is truthy
 
-
-
 ## [`None`](https://launchschool.com/books/python/read/data_types#none)
 - A way to express the absence of a value.
 
@@ -88,7 +86,6 @@
 
 ### list methods 
 - [`len(list)`](https://www.w3schools.com/python/ref_func_len.asp), [`list.append()`](https://www.w3schools.com/python/ref_list_append.asp), [`list.pop()`](https://www.w3schools.com/python/ref_list_pop.asp), [`list.reverse()`](https://www.w3schools.com/python/ref_list_reverse.asp)
-
 
 ## [dictionaries](https://launchschool.com/books/python/read/data_types#mappings)
 - A unordered collection of key-value pairs.
@@ -230,4 +227,3 @@
 ### statements
 - An instruction that tells Python to perform an action of some kind. 
 - Statements don't return values.
-
