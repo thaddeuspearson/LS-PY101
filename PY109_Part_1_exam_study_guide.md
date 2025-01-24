@@ -208,7 +208,7 @@
     result2 = 42 % 0    # ZeroDivisionError: integer modulo by zero
     ```
 
-    
+
 ## Functions:
 
 1.  [definitions](https://launchschool.com/books/python/read/functions_methods#creatingfunctions) and [calls](https://launchschool.com/books/python/read/functions_methods#callingfunctions)
@@ -224,6 +224,10 @@
 ## [expressions and statements](https://launchschool.com/books/python/read/basic_ops#expressionsandstatements)
 
 ### expressions
+-  Combines values, variables, operators, and calls to functions to produce a new object.
+- Expressions must be evaluated to determine the expression's value.
 
 ### statements
+- An instruction that tells Python to perform an action of some kind. 
+- Statements don't return values.
 
