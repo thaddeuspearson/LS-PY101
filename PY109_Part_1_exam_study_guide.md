@@ -145,7 +145,7 @@
 
 1.  [`while`](https://launchschool.com/books/python/read/loops_iterating#whileloops)
 
-## [`print()`]() and [`input()`](https://launchschool.com/books/python/read/input_output#terminalinput)
+## [`print()`](https://launchschool.com/books/python/read/input_output#terminaloutput) and [`input()`](https://launchschool.com/books/python/read/input_output#terminalinput)
 
 ## [exceptions](https://launchschool.com/lessons/a29e9831/assignments/378f8121) (when they will occur and how to handle them)
 
